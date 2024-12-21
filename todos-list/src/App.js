@@ -1,13 +1,15 @@
 import './App.css';
-import Header from "./MyComponents/Header";
-// import Footer from "./MyComponents/Footer";
+import { Header } from "./MyComponents/Header";
 import { Footer } from './MyComponents/Footer';
+import { BrowserRouter as Router } from "react-router-dom";
 
 function App() {
   return (
     <>
-      <Header/>
-      <Footer/>
+      <Router>
+        <Header title="My Todo's List" search={true} />
+        <Footer />
+      </Router>
     </>
   );
 }

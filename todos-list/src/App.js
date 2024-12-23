@@ -40,14 +40,20 @@ function App() {
     localStorage.setItem("todos", JSON.stringify(todos));
   }, [todos]);
 
-  
+  const onDelete = (todo) => {
+    setTodos(todos.filter((e) => {
+      return e !== todo;
+    }));
+    console.log("deleted", todos)
+    localStorage.setItem("todos", JSON.stringify(todos));
+  }
 
   return (
     <>
       <Router>
         <Header title="My Todo's List" search={true}/>
-        {/* <AddTodo addTodo={addTodo}/> */}
-        <Todos todos={todos}/>
+        <Todos todos={todos} onDelete={onDelete} /> 
+        <AddTodo addTodo={addTodo}/>
         {/* <Routes>
           <Route exact path="/" render={() => {
             return (

@@ -46,8 +46,8 @@ function App() {
     <>
       <Router>
         <Header title="My Todo's List" search={true}/>
-        <AddTodo addTodo={addTodo}/>
-        {/* <Todos todos={todos}/> */}
+        {/* <AddTodo addTodo={addTodo}/> */}
+        <Todos todos={todos}/>
         {/* <Routes>
           <Route exact path="/" render={() => {
             return (

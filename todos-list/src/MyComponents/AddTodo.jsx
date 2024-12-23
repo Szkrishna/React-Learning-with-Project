@@ -30,7 +30,7 @@ export const AddTodo = ({ addTodo }) => {
         minWidth: "50vw",
         minHeight: "40vh",
         marginBottom: "150px" 
-      }
+    }
     return (
         <div className="container text-center" style={myStyle}>
             <div className="card" style={cardStyle}>

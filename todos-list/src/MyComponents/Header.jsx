@@ -4,8 +4,8 @@ import { Link } from "react-router-dom";
 
 export const Header = (props) => {
   return (
-    <nav class="navbar navbar-expand-lg bg-light bg-gradient">
-      <div class="container-fluid">
+    <nav class="navbar navbar-expand-lg" style={{ backgroundColor: "rgba(52, 152, 219, 0.6)"}}>
+      <div class="container-fluid py-2 px-4">
         <Link class="navbar-brand" href="#">{props.title}</Link>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -21,7 +21,7 @@ export const Header = (props) => {
           </ul>
           {props.search ? <form class="d-flex" role="search">
             <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
-            <button class="btn btn-outline-success" type="submit">Search</button>
+            <button className="btn btn-light" type="submit">Search</button>
           </form> : ""}
         </div>
       </div>

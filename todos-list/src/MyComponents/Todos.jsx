@@ -6,12 +6,19 @@ export const Todos = (props) => {
         minHeight: "82vh",
         maxHeight: "82vh",
         overflowY: "auto",
-        // marginTop: "3px",
-        backgroundColor: "rgb(255, 255, 255)"
+        marginTop: "3px",
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+    }
+
+    let cardStyle = {
+        minWidth: "60vw",
+        marginBottom: "30px" 
     }
     return (
-        <div style={myStyle}>
-            <div className='card'>
+        <div className="container text-center" style={myStyle}>
+            <div className="card" style={cardStyle}>
                 <h3 className="card-header text-center">Todos List</h3>
                 {props.todos.length === 0 ? "No Todos to display" :
                     props.todos.map((todo) => {

@@ -1,10 +1,10 @@
 import React from 'react'
-// import { TodoItem } from "./TodoItem";
+import { TodoItem } from "./TodoItem";
 
 export const Todos = (props) => {
     let myStyle = {
         minHeight: "70vh",
-        margin: "44px auto"
+        margin: "45px auto"
     }
     return (
         <div className="container" style={myStyle}>
@@ -12,10 +12,11 @@ export const Todos = (props) => {
             {props.todos.length === 0 ? "No Todos to display" :
                 props.todos.map((todo) => {
                     return (<>
-                        <div>
+                        {/* <div>
                             <h6 className='mb-0'>{todo.sr_no}: {todo.title}</h6>
                         </div>
-                        <p>{todo.description}</p>
+                        <p>{todo.description}</p> */}
+                        <TodoItem todo={todo} key={todo.sno}/>
                     </>)
                 })
             }

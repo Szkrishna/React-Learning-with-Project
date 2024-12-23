@@ -3,9 +3,9 @@ import React from 'react';
 export const TodoItem = ({ todo, onDelete }) => {
     return (
         <>
-            <div>
+            <div className='ms-5 ps-5'>
                 <h4>{todo.title}</h4>
-                <p>{todo.description}</p>
+                <p>{todo.desc}</p>
             </div>
             <hr />
         </>

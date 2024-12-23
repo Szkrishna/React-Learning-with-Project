@@ -3,19 +3,17 @@ import { TodoItem } from "./TodoItem";
 
 export const Todos = (props) => {
     let myStyle = {
-        minHeight: "70vh",
-        margin: "45px auto"
+        minHeight: "82vh",
+        maxHeight: "82vh",
+        overflowY: "auto",
+        marginTop: "3px",
     }
     return (
-        <div className="container" style={myStyle}>
+        <div className="" style={myStyle}>
             <h3 className="my-3 text-center">Todos List</h3>
             {props.todos.length === 0 ? "No Todos to display" :
                 props.todos.map((todo) => {
                     return (<>
-                        {/* <div>
-                            <h6 className='mb-0'>{todo.sr_no}: {todo.title}</h6>
-                        </div>
-                        <p>{todo.description}</p> */}
                         <TodoItem todo={todo} key={todo.sno}/>
                     </>)
                 })

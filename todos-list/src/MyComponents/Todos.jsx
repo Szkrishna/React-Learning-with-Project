@@ -17,12 +17,12 @@ export const Todos = (props) => {
         maxWidth: "75vw",
         minHeight: "65vh",
         maxHeight: "65vh",
-        marginBottom: "30px" ,
+        marginBottom: "30px",
         overflowY: "auto"
     }
 
     let cardHeaderStyle = {
-        position: "sticky", 
+        position: "sticky",
         top: "0",
         zIndex: "100",
         backgroundColor: "#fff"
@@ -34,7 +34,7 @@ export const Todos = (props) => {
                 {props.todos.length === 0 ? "No Todos to display" :
                     props.todos.map((todo) => {
                         return (<>
-                            <TodoItem todo={todo}  key={todo.sno} onDelete={props.onDelete}/>
+                            <TodoItem todo={todo} key={todo.sno} onDelete={props.onDelete} />
                         </>)
                     })
                 }

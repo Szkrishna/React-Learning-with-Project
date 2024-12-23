@@ -4,8 +4,8 @@ import { Footer } from './MyComponents/Footer';
 import { AddTodo } from './MyComponents/AddTodo';
 import { Todos } from './MyComponents/Todos';
 import React, { useState, useEffect } from 'react';
-import { 
-  BrowserRouter as Router, 
+import {
+  BrowserRouter as Router,
   // Routes, 
   // Route 
 } from "react-router-dom";
@@ -44,16 +44,15 @@ function App() {
     setTodos(todos.filter((e) => {
       return e !== todo;
     }));
-    console.log("deleted", todos)
     localStorage.setItem("todos", JSON.stringify(todos));
   }
 
   return (
     <>
       <Router>
-        <Header title="My Todo's List" search={true}/>
-        <Todos todos={todos} onDelete={onDelete} /> 
-        <AddTodo addTodo={addTodo}/>
+        <Header title="My Todo's List" search={true} />
+        <Todos todos={todos} onDelete={onDelete} />
+        <AddTodo addTodo={addTodo} />
         {/* <Routes>
           <Route exact path="/" render={() => {
             return (

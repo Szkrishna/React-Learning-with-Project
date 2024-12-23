@@ -1,6 +1,6 @@
 import React from 'react';
 
-export const TodoItem = ({todo, onDelete}) => {
+export const TodoItem = ({ todo, onDelete }) => {
     let todoBoxStyle = {
         border: "1px solid rgba(0, 0, 0, 0.17)",
         borderRadius: "10px",
@@ -14,7 +14,7 @@ export const TodoItem = ({todo, onDelete}) => {
                 <div style={todoBoxStyle}>
                     <h4>{todo.sno + 1}. {todo.title}</h4>
                     <p className='mb-1'>{todo.desc}</p>
-                    <button className="btn btn-sm btn-danger" onClick={()=>{onDelete(todo)}}>Delete</button> 
+                    <button className="btn btn-sm btn-danger" onClick={() => { onDelete(todo) }}>Delete</button>
                 </div>
             </div>
         </>

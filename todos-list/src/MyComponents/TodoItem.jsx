@@ -10,7 +10,7 @@ export const TodoItem = ({ todo }) => {
 
     return (
         <>
-            <div className='card-body text-start'>
+            <div className='card-body text-start p-3'>
                 <div style={todoBoxStyle}>
                     <h4>{todo.sno + 1}. {todo.title}</h4>
                     <p className='mb-1'>{todo.desc}</p>

@@ -46,7 +46,7 @@ export const AddTodo = ({ addTodo }) => {
                             <label htmlFor="desc" className="form-label">Todo Description</label>
                             <input type="text" value={desc} onChange={(e) => setDesc(e.target.value)} className="form-control" id="desc" />
                         </div>
-                        <button type="submit" className="btn btn-sm btn-success">Add Todo</button>
+                        <button type="submit" className="btn btn-success">Add Todo</button>
                     </form>
                 </div>
             </div>

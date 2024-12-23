@@ -1,13 +1,12 @@
 import React from 'react';
 
-export const TodoItem = ({ todo, onDelete }) => {
+export const TodoItem = ({ todo }) => {
     return (
         <>
-            <div className='ms-5 ps-5'>
-                <h4>{todo.title}</h4>
+            <div className='card-body ms-5 ps-5 border-bottom'>
+                <h4>{todo.sno+1}. {todo.title}</h4>
                 <p>{todo.desc}</p>
             </div>
-            <hr />
         </>
     )
 }

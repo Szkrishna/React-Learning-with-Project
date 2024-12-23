@@ -40,12 +40,14 @@ function App() {
     localStorage.setItem("todos", JSON.stringify(todos));
   }, [todos]);
 
+  
+
   return (
     <>
       <Router>
-        <Header title="My Todo's List" search={true} />
-        <AddTodo addTodo={addTodo} />
-        <Todos todos={todos}/>
+        <Header title="My Todo's List" search={true}/>
+        <AddTodo addTodo={addTodo}/>
+        {/* <Todos todos={todos}/> */}
         {/* <Routes>
           <Route exact path="/" render={() => {
             return (

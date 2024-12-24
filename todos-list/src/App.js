@@ -3,6 +3,7 @@ import { Header } from "./MyComponents/Header";
 import { Footer } from './MyComponents/Footer';
 import { AddTodo } from './MyComponents/AddTodo';
 import { Todos } from './MyComponents/Todos';
+import { About } from './MyComponents/About';
 import React, { useState, useEffect } from 'react';
 import {
   BrowserRouter as Router,
@@ -55,6 +56,9 @@ function App() {
           } />
           <Route exact path="/add-todo" element={
             <AddTodo addTodo={addTodo} />
+          } />
+          <Route exact path="/about" element={
+            <About />
           } />
         </Routes>
         <Footer />

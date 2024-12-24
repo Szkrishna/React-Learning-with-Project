@@ -4,6 +4,7 @@ import { Footer } from './MyComponents/Footer';
 import { AddTodo } from './MyComponents/AddTodo';
 import { Todos } from './MyComponents/Todos';
 import { About } from './MyComponents/About';
+import { Contact } from './MyComponents/Contact';
 import React, { useState, useEffect } from 'react';
 import {
   BrowserRouter as Router,
@@ -54,11 +55,14 @@ function App() {
           <Route exact path="/" element={
             <Todos todos={todos} onDelete={onDelete} />
           } />
-          <Route exact path="/add-todo" element={
-            <AddTodo addTodo={addTodo} />
-          } />
           <Route exact path="/about" element={
             <About />
+          } />
+          <Route exact path="/contact" element={
+            <Contact />
+          } />
+          <Route exact path="/add-todo" element={
+            <AddTodo addTodo={addTodo} />
           } />
         </Routes>
         <Footer />

@@ -34,19 +34,19 @@ export const AddTodo = ({ addTodo }) => {
     return (
         <div className="container text-center" style={myStyle}>
             <div className="card" style={cardStyle}>
-                <h3 className="card-header text-center">Add a Todo</h3>
+                <h3 className="card-header text-center">Add Todo</h3>
                 <div className="card-body p-4">
                     <form onSubmit={submit}>
-                        <div className="mb-3">
-                            <label htmlFor="title" className="form-label">Todo Title</label>
+                        <div className="mb-3 text-start">
+                            <label htmlFor="title" className="form-label fw-bold">Todo Title</label>
                             <input type="text" value={title} onChange={(e) => setTitle(e.target.value)} className="form-control" id="title" aria-describedby="emailHelp" />
 
                         </div>
-                        <div className="mb-3">
-                            <label htmlFor="desc" className="form-label">Todo Description</label>
+                        <div className="mb-4 text-start">
+                            <label htmlFor="desc" className="form-label fw-bold">Todo Description</label>
                             <input type="text" value={desc} onChange={(e) => setDesc(e.target.value)} className="form-control" id="desc" />
                         </div>
-                        <button type="submit" className="btn btn-success">Add Todo</button>
+                        <button type="submit" className="btn btn-success text-center">Add Todo</button>
                     </form>
                 </div>
             </div>

@@ -25,7 +25,7 @@ export const Todos = (props) => {
         position: "sticky",
         top: "0",
         zIndex: "100",
-        backgroundColor: "#fff"
+        backgroundColor: "#fafafa"
     }
     return (
         <div className="container text-center" style={myStyle}>

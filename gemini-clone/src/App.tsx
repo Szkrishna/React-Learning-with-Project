@@ -2,7 +2,9 @@ import React from 'react';
 
 const App = () => {
   return (
-    <div>Gemini Clone</div>
+    <>
+      <div>Gemini Clone</div>
+    </>
   )
 }
 

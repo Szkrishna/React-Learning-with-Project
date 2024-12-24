@@ -12,6 +12,7 @@ import {
   Route
 } from "react-router-dom";
 
+
 function App() {
   let initTodo;
   if (localStorage.getItem("todos") === null) {
@@ -19,6 +20,7 @@ function App() {
   } else {
     initTodo = JSON.parse(localStorage.getItem("todos"));
   }
+
 
   const addTodo = (title, desc) => {
     let sno;
@@ -35,6 +37,7 @@ function App() {
     setTodos([...todos, myTodo]);
   };
 
+
   const onDelete = (todo) => {
     setTodos(todos.filter((e) => {
       return e !== todo;
@@ -42,18 +45,28 @@ function App() {
     localStorage.setItem("todos", JSON.stringify(todos));
   };
 
+  
   const [todos, setTodos] = useState(initTodo);
   useEffect(() => {
     localStorage.setItem("todos", JSON.stringify(todos));
   }, [todos]);
+  
 
+  const [filteredTodos, setFilteredTodos] = useState(todos);
+  const handleSearch = (query) => {
+    const filtered = todos.filter((todo) =>
+      todo.title.toLowerCase().includes(query.toLowerCase())
+    );
+    setFilteredTodos(filtered);
+  };
+  
   return (
     <>
       <Router>
-        <Header title="My Todo's List" search={true} />
+        <Header title="My Todo's List" onSearch={handleSearch}/>
         <Routes>
           <Route exact path="/" element={
-            <Todos todos={todos} onDelete={onDelete} />
+            <Todos todos={filteredTodos} onDelete={onDelete} />
           } />
           <Route exact path="/about" element={
             <About />

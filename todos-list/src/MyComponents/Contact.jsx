@@ -13,56 +13,31 @@ export const Contact = () => {
         setFormData({ name: "", email: "", message: "" });
     };
 
-    const buttonStyle = {
-        backgroundColor: "#007BFF",
-        color: "#FFF",
-        padding: "10px 20px",
-        border: "none",
-        cursor: "pointer"
-    }
-
     return (
-        <div style={{ padding: "20px", fontFamily: "Arial, sans-serif" }}>
-            <h1>Contact Us</h1>
-            <p>If you have any questions, feedback, or concerns, feel free to reach out to us!</p>
+        <div style={{ padding: "51px", fontFamily: "Arial, sans-serif" }}>
+            <div style={{ maxWidth: "550px", margin: "auto" }}>
+                <h1 className="text-center">Contact Us</h1>
+                <p className="mb-4">If you have any questions, feedback, or concerns, feel free to reach out to us!</p>
+            </div>
             <form onSubmit={handleSubmit} style={{ maxWidth: "500px", margin: "auto" }}>
                 <div style={{ marginBottom: "10px" }}>
                     <label htmlFor="name" style={{ display: "block", marginBottom: "5px" }}>Name</label>
-                    <input
-                        type="text"
-                        id="name"
-                        name="name"
-                        value={formData.name}
-                        onChange={handleChange}
-                        style={{ width: "100%", padding: "8px" }}
-                        required
-                    />
+                    <input type="text" id="name" name="name" value={formData.name} onChange={handleChange}
+                        className="form-control" required/>
                 </div>
                 <div style={{ marginBottom: "10px" }}>
                     <label htmlFor="email" style={{ display: "block", marginBottom: "5px" }}>Email</label>
-                    <input
-                        type="email"
-                        id="email"
-                        name="email"
-                        value={formData.email}
-                        onChange={handleChange}
-                        style={{ width: "100%", padding: "8px" }}
-                        required
-                    />
+                    <input type="email" id="email" name="email" value={formData.email} onChange={handleChange}
+                        className="form-control" required/>
                 </div>
                 <div style={{ marginBottom: "10px" }}>
                     <label htmlFor="message" style={{ display: "block", marginBottom: "5px" }}>Message</label>
-                    <textarea
-                        id="message"
-                        name="message"
-                        value={formData.message}
-                        onChange={handleChange}
-                        rows="5"
-                        style={{ width: "100%", padding: "8px" }}
-                        required
-                    />
+                    <textarea id="message" name="message" value={formData.message} onChange={handleChange}
+                        rows="5" className="form-control" required/>
                 </div>
-                <button type="submit" style={buttonStyle}>Submit</button>
+                <div className="text-center">
+                    <button type="submit" className="btn btn-primary mt-3">Submit</button>   
+                </div>
             </form>
         </div>
     );
